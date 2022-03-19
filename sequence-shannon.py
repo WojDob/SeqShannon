@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import argparse
-import json
 import math
 import os
 import sys
@@ -18,7 +17,7 @@ def main():
         description="Calculate shannon entropy for biological sequences."
     )
     parser.add_argument("-i", "--input", help="Input fasta file ")
-    parser.add_argument("-o", "--output", help="Output json file")
+    parser.add_argument("-o", "--output", help="Output file")
     args = parser.parse_args()
 
     if not args.input:
@@ -28,8 +27,7 @@ def main():
     results = parse_input_file(args.input)
 
     if args.output:
-        with open(args.output, "w") as f:
-            json.dump(results, f, indent=4)
+        write_dict(results, args.output)
     else:
         print_dict(results)
 
@@ -63,6 +61,12 @@ def parse_input_file(input_file):
 def print_dict(d):
     for k, v in d.items():
         print(k, v)
+
+
+def write_dict(d, file_path):
+    with open(file_path, "w") as f:
+        for k, v in d.items():
+            f.write(f"{k} {v}\n")
 
 
 if __name__ == "__main__":
