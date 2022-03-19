@@ -3,13 +3,11 @@ Calculate Shannon entropy for biological sequences. Works for both nucleotide an
 
 ## Installation
 
-Requires [pip](https://choosealicense.com/licenses/mit/) and [virtualenv](https://virtualenv.pypa.io/en/latest/).
+Requires [pip](https://choosealicense.com/licenses/mit/). 
 
 ```bash
 git clone git@github.com:WojDob/sequence-shannon.git
 cd sequence-shannon
-virtualenv venv
-source venv/bin/activate
 pip install -r requirements.txt
 ```
 
