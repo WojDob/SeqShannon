@@ -1,4 +1,4 @@
-# sequence-shannon
+# Sequence-Shannon
 Calculate Shannon entropy for biological sequences. Works for both nucleotide and amino acid sequences.
 
 ## Installation
