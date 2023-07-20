@@ -1,6 +1,12 @@
 # Sequence-Shannon
 Calculate Shannon entropy for biological sequences. Works for both nucleotide and amino acid sequences.
 
+## Description
+This Python script takes in a FASTA file and calculates the Shannon entropy for each biological sequence in the file. It utilizes the BioPython library for parsing FASTA files, and its results can be easily written to an output file or printed in the console.
+
+The Shannon entropy is a measure of the uncertainty or randomness of a set of data. In the context of biological sequences, such as DNA or protein sequences, the Shannon entropy can provide insights into the variability and complexity of the sequence.
+
+
 ## Installation
 
 Requires [pip](https://choosealicense.com/licenses/mit/). 
