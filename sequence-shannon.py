@@ -34,7 +34,7 @@ def main():
     return sys.exit(EXIT_SUCCESS)
 
 
-def calculate_shannon_entropy(sequence):
+def shannon_entropy(sequence):
     seq_list = list(sequence)
     unique_symbols = set(seq_list)
     M = float(len(seq_list))
@@ -54,7 +54,7 @@ def parse_input_file(input_file):
     records = (r for r in SeqIO.parse(input_file, "fasta"))
     results = {}
     for r in records:
-        results[r.id] = calculate_shannon_entropy(r.seq)
+        results[r.id] = shannon_entropy(r.seq)
     return results
 
 
